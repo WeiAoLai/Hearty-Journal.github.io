@@ -1,20 +1,15 @@
 /* 設置網頁主體樣式 */
 body {
     background-color: #FEE5D8;
-    background-image: url('https://cdn.pixabay.com/photo/2021/02/06/11/07/snow-5984853_960_720.jpg');
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
     height: 0;
     width: 0;
 }
-
+/* 中間的板板 */
 #content {
     /* 讓板板浮到畫布上 */
-    /*position:absolute;*/
-    /*!*transform: translate(67%, 45%);*!*/
-    /*top: 20%;*/
-    /*left: 28%;*/
     position: fixed;
     top:20%;
     left: 28%;
@@ -29,18 +24,6 @@ body {
 
 /* 設置網頁標題樣式 */
 h1 {
-    /*font-size: 3em;  !* 設置標題字體大小 *!*/
-    /*letter-spacing: -1px;  !* 設置字母間距 *!*/
-    /*position: absolute;  !* 設置標題的絕對定位，相對於最近的已定位祖先元素 *!*/
-    /*transform: translate(-95%, -40%);*/
-    /*!*margin: 0;  !* 去掉標題的預設外邊距 *!*!*/
-    /*top: -4px;  !* 將標題向上移動一些像素 *!*/
-    /*right: 5px;  !* 將標題向右移動一些像素 *!*/
-    /*!*color: transparent;  !* 將標題文本顏色設置為透明 *!*!*/
-    /*text-shadow: 0 0 4px white;  !* 為標題添加文本陰影，讓其看起來更加突出 *!*/
-    /*text-align: center;*/
-    /*margin-bottom: 20px;*/
-    /*color: #FF7171;*/
     font-family: "Comic Sans MS";
     text-align: center;
     font-size: 3em;
@@ -124,6 +107,7 @@ img {
     height: 110px;
 }
 
+/* 再次嘗試的按鈕 */
 a {
     display: block;
     text-align: center;
@@ -136,7 +120,7 @@ a {
     margin: 0 auto;
     width: 200px;
 }
-
+/* 當滑鼠到按鈕時，變色 */
 a:hover {
     background-color: #FFB6B6;
 }
@@ -169,6 +153,8 @@ a:hover {
     animation: typing 1.5s steps(20, end), blink-caret .5s step-end infinite;
 }
 
+/* 關鍵影格 keyframe */
+/* 不可單獨使用數字，一定要加入'%' */
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -177,4 +163,35 @@ a:hover {
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #FF7171 }
+}
+
+/* 正方形 */
+.spinner {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 22px;
+    right: 2%;
+
+}
+/* 讓正方形變圓型：改其中一邊的顏色，轉的時候就會有中間的線在轉的錯覺 */
+.spinner-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 30%; 可愛的方形 */
+    border-radius: 50%; 
+    border: 8px solid #ffbcbc;
+    border-top-color: #ff595e;
+    /* 動畫的速度 */
+    animation: spin 1s ease-in-out infinite;
+}
+/* 動畫：轉360度 */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
