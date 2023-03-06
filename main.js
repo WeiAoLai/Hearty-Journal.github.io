@@ -95,7 +95,7 @@ class Ball {
 
 const balls = [];
 while (balls.length < 50) {
-    const size = random(5, 10); // 生成圓的半徑
+    const size = random(7, 10); // 生成圓的半徑
     const ball = new Ball(
         // 新增一個圓球，使用 random 函數為每個屬性生成隨機值
         random(0 + size, width - size), // 圓的 x 坐標
