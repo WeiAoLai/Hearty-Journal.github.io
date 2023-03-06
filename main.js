@@ -12,7 +12,9 @@ loader.classList.add("loader");
 
 // 創建打字動畫元素
 const typewriter = document.createElement("div");
+// CSS中的loader的動畫
 typewriter.classList.add("typewriter");
+// 要顯示的字
 typewriter.textContent = "Loading...";
 
 // 將打字動畫元素加入到loader元素中
@@ -35,12 +37,13 @@ function random(min, max) {
 function randomRGB() {
     // 返回一個帶有隨機 RGB 值的字符串
     // 淺色小球球
-    // return `rgb(${random(200, 255)},${random(255, 255)},${random(200, 255)})`;
+    return `rgb(${random(200, 255)},${random(255, 255)},${random(200, 255)})`;
     // 白色小球球
-    return `rgb(${random(255, 255)},${random(255, 255)},${random(255, 255)})`;
+    // return `rgb(${random(255, 255)},${random(255, 255)},${random(255, 255)})`;
 }
-
+// 球該有的設定--------------------------------------------------------------
 class Ball {
+    // 初始：
     constructor(x, y, velX, velY, color, size) {
         this.x = x;  // 球的 x 軸座標
         this.y = y;  // 球的 y 軸座標
@@ -73,7 +76,7 @@ class Ball {
         if ((this.y - this.size) <= 0) {  // 如果球撞到頂部牆
             this.velY = Math.abs(this.velY);  // 將速度反向
         }
-
+        // 如果都沒有撞到牆，繼續自己的路
         this.x += this.velX;  // 更新球的 x 軸座標
         this.y += this.velY;  // 更新球的 y 軸座標
     }
@@ -92,7 +95,8 @@ class Ball {
         }
     }
 }
-
+// --------------------------------------------------------------------------
+// 宣告球球陣列，保持球球數量
 const balls = [];
 while (balls.length < 50) {
     const size = random(7, 10); // 生成圓的半徑
@@ -107,7 +111,7 @@ while (balls.length < 50) {
     );
     balls.push(ball); // 將圓球添加到陣列中
 }
-
+// 迴圈
 function loop() {
     ctx.clearRect(0, 0, width, height);
     ctx.fillStyle = 'rgba(254, 229, 216, 1)'; // 用不透明矩形清除畫布
