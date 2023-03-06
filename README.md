@@ -1,8 +1,8 @@
 # Hearty-Journal.github.io
 溫度日記當機網頁設計。
 
-### 關於專題的七大奇景：https://www.notion.so/78e0d5c876b64cab92958080ba9d5084
-### 專題思緒：https://www.notion.so/9a72190aa1e54431b7e9eb4033ff9c4e
+### 關於專題的七大奇景：
+### 專題思緒：
 ## 檔名的功用：
 * ### index.html(網頁)
 * ### style.css(裝飾)
