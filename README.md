@@ -52,6 +52,6 @@
 ## 最終成果：
 
 <aside>
-❤️ **當機等候網頁：**[溫度日記當機等候網頁](https://weiaolai.github.io/Hearty-Journal.github.io/)
+❤ **當機等候網頁：** [溫度日記當機等候網頁](https://weiaolai.github.io/Hearty-Journal.github.io/)
 </aside>
   
